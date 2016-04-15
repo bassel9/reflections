@@ -1,0 +1,93 @@
+Q*:How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+A:It help me this way:
+I dont need to search for the diff manually, I can just use the
+diff tool and it give me the difference in two files manually.
+
+
+to see the difference in lines between two versions of files,
+write in command line in linux or mac:
+diff -u game_old.js game_new.js
+in windows:
+FC game_old.js game_new.js
+The line with [-] sign is the old version, [+] sign indicates to the new version
+
+
+Q*: How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+A: Some time when I write code, the app works well.
+After some time, I update the code and then the app doesn't work.
+Access to entire history will help me see the old code and ideas and compare both files.
+
+
+Q*:How can you use the commands git log and git diff to view the history of files?
+I will split question to two questions:
+Q: What is commit and how to view them ?
+A: commit is every new version we make. We can view them by type:
+git log
+The commits are shown in reverse order by git log (most recent commit first).
+
+
+
+Q: How to compare diff between each commit ?
+A: type git diff [id_commit_old] [id_commit_new]
+
+
+Q: How Often to Commit ?
+A good rule of thumb is to make one commit per logical change. 
+For example, if you fixed a typo, then fixed a bug in a 
+separate part of the file, you should use one commit for each 
+change since they are logically separate. If you do this, each 
+commit will have one purpose that can be easily understood.
+
+
+Q*: What do you think are the pros and cons of manually choosing when to create
+a commit, like you do in Git, vs having versions automatically saved,
+like Google Docs does?
+A:
+Pros:
+You can save at logical and reasonable changes you make so you can understand
+why did you write new or update new lines.
+You can write a commit title to know what extactly is the changes you made.
+Cons:
+Some time it is hard to remember to commit the changes you make.
+
+
+Q*: Why do you think some version control systems, like Git, allow saving
+multiple files in one commit, while others, like Google Docs,
+treat each file separately?
+
+A: Because Git usually used for logical and relatoin stuff. So if you
+change something in one file, it will affect other files.
+
+Q: Why is download repository called git clone ?
+A: Because it creates a clone of the repository.
+
+Will the history of changes to the directory or repository is copied either you
+clone or copy ?
+This is true for cloning a repository, but not for copying a directory.
+The main reason to use git clone rather than copying the directory is
+because git clone will also copy the commit history of the repository.
+However, copying can be done on any directory, whereas git clone
+only works on a Git repository.
+
+Q: How to Get Colored Output ?
+A: To get colored diff output, run git config --global color.ui auto
+
+
+Q: How can you check out old version of the code:
+A: git checkout [id], now you are working on the old version
+
+Q*: How might using version control make you more confident to make changes
+that could break something?
+A: e.g. When I have other files connected to my current file by a code,
+I dont't have to change the path or the file name, the other stuff are very clear :)
+
+Q*: Reflect: How Do You Want to Use Git?
+A: When ever I want to write a program, and write files that need to be always
+updated. Also, when ever I want to take risks of changing the code.
+
+Q*: Now that you have your workspace set up, what do you want to try using Git for?
+A: Write Android and PHP codes.
+
+
