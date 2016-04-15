@@ -29,3 +29,20 @@ Q: How to commit the files in the staging area ?
 A: git commit , then you can right the message in the editor
 or
 git commit -m "Commit message"
+
+Q: How to compare between the current staging area lines and
+the new changes[working directory] ?
+A: git diff . If you want to update the staging area then type:
+git add [the files names that you have updated]
+
+Q: How to compare the staging area with the most recent commit?
+A: git diff --staged
+
+Q: How can I delete any discard that haven't committed yet
+either it is in the working directory or in the staging area ?
+A: git reset --hard
+
+Q*: How can you use the staging area to make sure you have one commit per logical change?
+A: I can compare the working directory with the staging area
+since the staging area is up to the most recent commit. This
+way I can know if my changes have a logical change.
