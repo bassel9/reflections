@@ -1,0 +1,31 @@
+Q: How can I create a repository ?
+A: cd the path that contains the files and type :
+git init
+Only the files there will be included in the repository.
+
+How can I see the status of the repository ?
+git status
+
+Q*: What happens when you initialize a repository? Why do you need to do it?
+A directory called .git is created in the current path.
+Also the files in the current path will be untracked until I add them
+
+Q: What is the stagin area and How can I add files to it ?
+A: If I added files to the stagin area, when I do a commit,
+only the files inside it will be included in the commit.
+I can add the files to the stagin area by typing:
+git add [file name]
+
+Q: How can I remove a file from the staging area ?
+A: git reset [file name]
+
+Q*: How is the staging area different from the working directory
+and the repository? What value do you think it offers?
+A: The working directory is the folder that contains a repository
+and the files inside it while the staging area is the place that you
+put the files you want to be included in the commit
+
+Q: How to commit the files in the staging area ?
+A: git commit , then you can right the message in the editor
+or
+git commit -m "Commit message"
