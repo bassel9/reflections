@@ -46,3 +46,31 @@ Q*: How can you use the staging area to make sure you have one commit per logica
 A: I can compare the working directory with the staging area
 since the staging area is up to the most recent commit. This
 way I can know if my changes have a logical change.
+
+Q: How can I know current branch?
+A: git branch
+
+Q: How to create a new branch ?
+A: git branch [branch name]
+or
+git checkout -b [branchname] , this is shortcut so you can
+creaete and checkout in the same time
+
+Q*: What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+A: It would help me when I want to do some extra tests or
+another version that have some changes
+e.g. If I want to make android project named ActionBar,
+when I finish I can go ahead and create branch for searchview
+
+Q: How can you checkout the main branch or any branch?
+A: git checkout master , git checkout [branch name]
+
+Q: How to see the log of any branch ?
+A: git log [branch name]
+
+Q: How to visualize the branch structure ?
+A: git log --graph --oneline master coins
+--graph to visualize and --oneline to make the output shorter
+
+Q*: How do the diagrams help you visualize the branch structure?
+A: To know the possible reachability
