@@ -23,3 +23,6 @@ A: git remote add [new remote name] [remote url]
 Q: How to send data to a remote repository ?
 A: git push [the remote I want to send changes to] [name of
 the local branch you'd like to push]
+
+Q*: When would you want to use a remote repository rather than keeping all your work local?
+A: When I want to share it with somebody else, or if I fear of loosing my data.
