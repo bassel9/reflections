@@ -50,6 +50,10 @@ way I can know if my changes have a logical change.
 Q: How can I know current branch?
 A: git branch
 
+Q: How to show all branches includ branches that's done by
+other authors ?
+A: git branch -a
+
 Q: How to create a new branch ?
 A: git branch [branch name]
 or
