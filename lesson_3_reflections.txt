@@ -20,3 +20,6 @@ that you will fetch data from, or the url that you will push data to .
 Q: How to add a repository on Github as a remote ?
 A: git remote add [new remote name] [remote url]
 
+Q: How to send data to a remote repository ?
+A: git push [the remote I want to send changes to] [name of
+the local branch you'd like to push]
