@@ -74,3 +74,46 @@ A: git log --graph --oneline master coins
 
 Q*: How do the diagrams help you visualize the branch structure?
 A: To know the possible reachability
+
+Q: Will the unreachable commits be accessible forever ?
+A: No. those commits will continue to be accessible by commit id,
+ until Git’s garbage collection runs. This will happen
+ automatically from time to time, unless you actively turn it off.
+ You can also run this process manually with git gc
+
+ Q: How to merge two branches ?
+ A:Checkout the branch that will be updated then type:
+ git merge [branch] [another branch]
+ Since the checked-out branch is always included in the merge, you may have guessed that when you are merging two branches, you don't need to specify both of them as arguments to git merge on the command line. If you want to merge branch2 into branch1, you can simply git checkout branch1 and then type git merge branch2. The only reason to type git merge branch1 branch2 is if it helps you keep better mental track of which branches you are merging.
+ Also, since the two branches are merged, the order in which they
+ are typed into the command line does not matter. The key is to
+ remember that git merge always merges all the specified branches
+ into the currently checked out branch, creating a new commit for
+ that branch.
+
+
+
+ Q: How to find the changes introduced by a commit compared to
+ its parent ? >> because after merging it would be hard to know
+ the parent as the commit of the two previous branches had been
+ mixed together depend on the timestamp <<
+ A: git show [id]
+
+ Q: How to delete a branch ?
+ A: git branch -d [branch name]
+
+ Q*: What is the result of merging two branches together? Why do
+ we represent it in the diagram the way we do?
+ A: Any branch that delete a line in the original file will
+ be deleted in the final file. Any line we add will be added.
+ The lines that's aren't changed will remain.
+
+ Q: How to abort mergin when conflict happens ?
+ A: git merge --abort
+
+ Q: How to show a specific number of logs ?
+ A: git log -n [the number you want]
+
+ Q*: What are the pros and cons of Git’s automatic merging vs. 
+ always doing merges manually?
+ A: The answer is clear this time.
