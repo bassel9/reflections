@@ -30,7 +30,7 @@ A: When I want to share it with somebody else, or if I fear of loosing my data.
 Q: How to stage all files in the current path including deleted files ?
 A: git add -u
 
-Q: Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+Q*: Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 
-A: Because if someone is working manually and the other work on
-GitHub, you don't want conflicts to happens .
+A: Because if someone is working locally and the other is working on
+GitHub, you don't want conflicts to happens.
