@@ -26,3 +26,6 @@ the local branch you'd like to push]
 
 Q*: When would you want to use a remote repository rather than keeping all your work local?
 A: When I want to share it with somebody else, or if I fear of loosing my data.
+
+Q: How to stage all files in the current path including deleted files ?
+A: git add -u
