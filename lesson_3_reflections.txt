@@ -15,7 +15,7 @@ git config --global credential.helper 'cache --timeout=3600'
 Q: How to show the current remote repositories ?
 A: git remote
 git remote -v  , will make the outpot more verbose >> includes url
-that you will fetch data from, or the url that you will push data to .
+that you will fetch data from, or the url that you will push data to, that is, more verbose.
 
 Q: How to add a repository on Github as a remote ?
 A: git remote add [new remote name] [remote url]
@@ -26,7 +26,7 @@ the local branch you'd like to push]
 
 Q: How to fetch data from a remote repository ?
 A: git pull [the remote I want to fetch data from] [name of
-the local branch you'd like to pull data to]]
+the local branch you'd like to pull data to]
 
 Q*: When would you want to use a remote repository rather than keeping all your work local?
 A: When I want to share it with somebody else, or if I fear of loosing my data.
@@ -35,6 +35,44 @@ Q: How to stage all files in the current path including deleted files ?
 A: git add -u
 
 Q*: Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+A: Because if someone is working locally and the other is working on GitHub, you don't want conflicts to happens .
 
-A: Because if someone is working locally and the other is working on
-GitHub, you don't want conflicts to happens.
+Q*: Describe the differences between forks, clones, and branches. When would you use one instead of another?
+A: When I clone a repository from GitHub's user to my account on
+GitHub, this process GitHub actually called forks. I do it when I
+want to edit the repository on GitHub since I don't have the
+permition to edit that user's repository.
+I do clone when I want to copy someone's repository on my machine.
+I already talked about branches in in lesson_2_reflections. It is
+totally a different concept.
+
+Q: How to change master to an older commit ?
+A: git reset --hard master~[number of an older commit]
+e.g git reset --hard master~1   >> # Reset current branch to one commit ago on master
+or
+git checkout master~1            # Checkout previous commit on master
+git checkout -b new_master       # Create branch for new master
+git branch -D master             # Delete old master
+git branch -mv new_master master # Make new_master master
+
+Q: How to sync files that have been changed in both local
+repository and remote repository ?
+A: git pull [remote branch] [local branch]
+or
+git fetch origin
+git merge master origin/master
+
+Q*: What is the benefit of having a copy of the last known state
+of the remote stored locally?
+A: 
+
+Q*: How would you collaborate without using Git or GitHub? What
+would be easier, and what would be harder?
+A: Google doc would be easier if we are collaborate on normal
+text. Howeve; Google doc would be harder on code.
+
+Q*: When would you want to make changes in a separate branch
+rather than directly in master? What benefits does each approach
+have?
+
+A: Maybe if we were collaborating in the same time then I would make changes in different branch. The benefit is to avoid conflicts and make the changes that we really want.

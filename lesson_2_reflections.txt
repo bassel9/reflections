@@ -104,7 +104,7 @@ A: No. those commits will continue to be accessible by commit id,
  A: git show [id]
 
  Q: How to delete a branch ?
- A: git branch -d [branch name]
+ A: git branch -D [branch name]
 
  Q*: What is the result of merging two branches together? Why do
  we represent it in the diagram the way we do?
